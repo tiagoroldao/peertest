@@ -1,17 +1,17 @@
 <template>
     <div class="home">
-        <ColorSync />
+        <ColorSyncPeer />
     </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import ColorSync from '@/components/ColorSync.vue';
+import ColorSyncPeer from '@/components/ColorSyncPeer.vue';
 
 @Component({
     components: {
-        ColorSync,
+        ColorSyncPeer,
     },
 })
-export default class Home extends Vue {}
+export default class Peer extends Vue {}
 </script>
