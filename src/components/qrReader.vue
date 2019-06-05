@@ -48,7 +48,9 @@ export default class QrReader extends Vue {
                         this.$emit('qrData', code.data);
                     }
                 }
-                requestAnimationFrame(tick);
+                if (this.playing) {
+                    requestAnimationFrame(tick);
+                }
             };
 
             navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' } }).then((stream) => {
